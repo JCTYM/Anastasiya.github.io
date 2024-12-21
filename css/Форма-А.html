@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Форма-А</title>
+  <style>
+    body {
+      display: block;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      align-self: block-start;
+      margin-left: 20px;
+      / Отступ между заголовком и формой /
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 600px;
+      / Ширина формы /
+      box-sizing: border-box;
+    }
+
+    .form-group {
+      display: block;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      / Отступ между группами /
+line-height: 0.5;
+margin-right: 10px;
+    }
+
+    .button-group {
+      display: block;
+      box-sizing: border-box;
+line-height: 1.0;
+      justify-content: block-end;
+      / Выравнивание кнопок внизу /
+    }
+
+    button {
+      margin-top: 20px;
+      / Отступ между кнопками /
+background-color: gray;
+border: 1px solid #ccc;
+  box-shadow: 0 2px 5px  rgba(0, 0, 0, 0.5);
+    }
+input,textarea,select{
+  border: 1px solid #ccc;
+  box-shadow: inset 0 2px 5px  rgba(0, 0, 0, 0.5);
+}
+
+    .form-label {
+      margin-bottom: 5px;
+      / Отступ между меткой и полем ввода /
+    }
+  </style>
+</head>
+<body>
+
+<h1>АО Птицефабрика №1</h1><br><br>
+
+<form align="center">
+    <div class="form-group" align="right">
+        <label class="form-label"  for="surname">Фамилия </label><br><br>
+
+        <label class="form-label" for="name">Инициалы </label><br><br>
+
+        <label class="form-label" for="password">Пароль</label><br><br>
+
+        <label class="form-label" for="address">Адрес получателя </label><br><br>
+
+        <label class="form-label" for="quantity">Количество </label><br><br>
+
+        <div style="line-height:5px"><label class="form-label" for="type">Тип </label></div><br><br>
+
+        <div style="line-height:5px"><label class="form-label">Доставка</label></div><br><br>
+
+        <div style="line-height:5px"><label class="form-label" for="requirements">Требуется накладная </label></div><br><br>
+        
+        <div style="line-height:50px"><label class="form-label" for="additional">Дополнительная информация </label></div><br><br>
+        
+<button type="submit">Заказать </button> <br><br>
+    </div>
+
+    <div class="button-group" align="left">
+      <input type="text" id="surname" name="surname" required><br><br>
+<input type="text" id="name" name="name" required><br><br>
+ <input type="password" id="password" name="password" required><br><br>
+<input type="text" id="address" name="address" required cols="2"><br><br>
+<input type="number" id="quantity" name="quantity" required><br><br>
+
+<select id="type" name="type">
+            <option value="куринные">Куринные</option>
+            <option value="перепелинные">Перепелинные</option>
+        </select>
+
+        <select id="type" name="type">
+            <option value="отборные">Отборные</option>
+            <option value="первого сорта">Первого сорта</option>
+            <option value="второго сорта">Второго сорта</option>
+        </select><br><br>
+
+<div style="line-height:12px"><input type="radio" id="post" name="delivery" value="Почтой">
+        <label for="post">Почтой</label>
+        <input type="radio" id="electronic" name="delivery" value="Электронно">
+        <label for="electronic">Электронно</label>
+        <input type="radio" id="courier" name="delivery" value="Курьером">
+        <label for="courier">Курьером</label></div><br><br>
+
+<div style="line-height:8px"><input type="checkbox" id="requirements" name="requirements"></div><br><br>
+<textarea id="additional" name="additional" rows="4"></textarea><br><br>
+        <button type="reset">Отменить</button><br><br>
+    </div>
+</form>
+
+</body>
+</html>

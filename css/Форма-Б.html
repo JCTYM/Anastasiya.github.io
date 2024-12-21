@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма-Б</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Цвет фона страницы */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .window {
+            border: 2px solid #0056b3; /* Синяя рамка вокруг окна */
+            border-radius: 5px;
+            background-color: white; /* Цвет фона окна */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для окна */
+            padding: 10px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #0056b3; /* Цвет заголовка окна */
+            color: white;
+            padding: 10px 5px;
+            border-radius: 5px 5px 0 0; /* Закругление верхних углов */
+        }
+
+        img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px; /* Отступ справа от изображения */
+        }
+
+        h1 {
+            margin: 0; /* Убираем отступы у заголовка */
+        }
+
+        section {
+            padding: 20px; /* Отступ внутри секции */
+        }
+
+        h2 {
+            font-family: 'Verdana', sans-serif; /* Изменение шрифта заголовка формы */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="url"],
+        input[type="file"],
+        select,
+        textarea {
+            border: 1px solid #ccc; /* Серые границы для текстовых полей */
+            border-radius: 4px;
+            padding: 10px;
+            width: calc(100% - 24px); /* Учитываем отступы */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+
+        input[type="file"] {
+            display: inline-block; /* Чтобы кнопка "Обзор" выглядела корректно */
+        }
+
+ 
+        input[type="reset"],
+        input[type="submit"] {
+            background-color: #e7f1ff; /* Цвет кнопок */
+            color: #0056b3; /* Голубой цвет текста кнопок */
+            border: 2px solid gray; 
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+        }
+
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Изменение цвета фона при наведении */
+            color: white; /* Изменение цвета текста при наведении */
+            transform: translateY(-2px); /* Эффект выпуклости */
+        }
+
+        textarea {
+            border: 1px solid #ccc; /* Серые границы для текстовой области */
+            border-radius: 4px;
+            padding: 10px;
+            width: calc(100% - 24px); /* Учитываем отступы */
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <header>
+            <img src="photobrauzera.png" alt="Фото браузера">
+            <h1>Пример</h1>
+        </header>
+        <section>
+            <h2>Пример формы регистрации сайта</h2>
+            <form action="submit_form.php" method="post">
+                <label for="login">Логин:</label><br>
+                <input type="text" id="login" name="login"><br>
+
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password"><br>
+
+                <label for="url">URL-адрес сайта:</label><br>
+<input type="url" id="url" name="url"><br>
+
+                <label for="site_name">Название сайта:</label><br>
+                <input type="text" id="site_name" name="site_name"><br>
+
+                <label for="description">Описание сайта:</label><br>
+                <textarea id="description" name="description" rows="6"></textarea><br>
+
+                <label for="theme">Тема сайта:</label><br>
+                <select id="theme" name="theme">
+                    <option value="light">Тема не выбрана</option>
+                    <option value="light">Светлая</option>
+                    <option value="dark">Темная</option>
+                    <option value="colorful">Яркая</option>
+                </select><br>
+
+                <label for="banner">Баннер 88x31:</label><br>
+                    <input type="file" id="banner" name="banner"><br><br>
+
+                <input type="reset" value="Очистить">
+                <input type="submit" value="Отправить">
+            </form>
+        </section>
+    </div>
+</body>
+</html>

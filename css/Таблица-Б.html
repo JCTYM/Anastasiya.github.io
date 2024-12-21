@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица-Б</title>
+    <style>
+        table {
+            width: 400px; /* Ширина таблицы */
+            height: 400px; /* Высота таблицы */
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 0; /* Убираем отступы для равного заполнения цветом */
+            text-align: center;
+        }
+        /* Заливка для объединенных строк */
+        .lightblue-bg {
+            background-color: lightblue; /* Голубой цвет */
+        }
+        .beige-bg {
+            background-color: beige; /* Бежевый цвет */
+        }
+        /* Заливка для ячеек в центре */
+        .red-bg {
+            background-color: red; /* Красный цвет */
+        }
+        .blue-bg {
+            background-color: blue; /* Синий цвет */
+        }
+        .green-bg {
+            background-color: green; /* Зеленый цвет */
+        }
+        .yellow-bg {
+            background-color: yellow; /* Желтый цвет */
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr class="lightblue-bg">
+        <th colspan="8" class="lightblue-bg"> </th>
+    </tr>
+    <tr class="beige-bg">
+        <td rowspan="6" class="beige-bg"> </td>
+        <th colspan="6" class="lightblue-bg"> </th>
+        <td rowspan="6" class="beige-bg"> </td>
+    </tr>
+    <tr class="beige-bg">
+        <td rowspan="4" class="beige-bg"> </td>
+        <th colspan="4" class="lightblue-bg"> </th>
+        <td rowspan="4" class="beige-bg"> </td>
+    </tr>
+    <tr class="beige-bg">
+        <td rowspan="2" class="beige-bg"> </td>
+        <td class="red-bg"> </td>
+        <td class="blue-bg"> </td>
+        <td rowspan="2" class="beige-bg"> </td>
+    </tr>
+    <tr class="beige-bg">
+        <td class="green-bg"> </td>
+        <td class="yellow-bg"> </td>
+    </tr>
+    <tr class="lightblue-bg">
+        <th colspan="4" class="lightblue-bg"> </th>
+    </tr>
+    <tr class="lightblue-bg">
+        <th colspan="6" class="lightblue-bg"> </th>
+    </tr>
+    <tr class="lightblue-bg">
+        <th colspan="8" class="lightblue-bg"> </th>
+    </tr>
+</table>
+
+</body>
+</html>
